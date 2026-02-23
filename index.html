@@ -1,3 +1,14 @@
+<!--
+██████╗  ██████╗ ██╗  ██╗███████╗██████╗ ███████╗██╗  ██╗
+██╔══██╗██╔═══██╗██║ ██╔╝██╔════╝██╔══██╗██╔════╝╚██╗██╔╝
+██████╔╝██║   ██║█████╔╝ █████╗  ██║  ██║█████╗   ╚███╔╝ 
+██╔═══╝ ██║   ██║██╔═██╗ ██╔══╝  ██║  ██║██╔══╝   ██╔██╗ 
+██║     ╚██████╔╝██║  ██╗███████╗██████╔╝███████╗██╔╝ ██╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+
+Pokédex Universe — Created by Yash
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,7 +160,9 @@
             position: relative; backdrop-filter: blur(5px);
             overflow: hidden;
         }
-
+  /* Pokédex Engine
+  Developer: Yash
+  © 2026 All Rights Reserved */
         .pokemon-card::after {
             content: ''; position: absolute; top: 0; right: 0;
             width: 0; height: 0; border-style: solid;
@@ -296,7 +309,9 @@
         </div>
     </main>
     <div id="bottom-sentinel" style="text-align:center; padding: 50px; opacity: 0.5;">LOADING MORE...</div>
-
+  <!-- Pokédex Engine
+  Developer: Yash
+  © 2026 All Rights Reserved -->
     <div id="modal" onclick="closeModal()">
         <div class="modal-body" id="modal-content-area" onclick="event.stopPropagation()">
             <img id="modal-img" src="" alt="" style="width:120px; image-rendering: pixelated;">
@@ -352,7 +367,9 @@
                 btn.style.display = "none";
             }
         };
-
+  // Pokédex Engine
+  // Developer: Yash
+  // © 2026 All Rights Reserved
         // --- CORE FETCHING ---
         const fetchBatch = async () => {
             // Check if we reached the limit for the selected region
@@ -465,7 +482,9 @@
             // Clear current list
             container.innerHTML = '';
             container.appendChild(noRes); 
-            
+  // Pokédex Engine
+  // Developer: Yash
+  // © 2026 All Rights Reserved            
             // Update pointers
             offset = newOffset;
             currentLimit = newOffset + regionCount; // Limit fetcher to end of region
@@ -499,7 +518,9 @@
             setTimeout(() => { document.querySelectorAll('.stat-fill').forEach(f => f.style.width = f.getAttribute('data-width')); }, 50);
             fetchEvolutionTree(p.species.url);
         };
-
+  // Pokédex Engine
+  // Developer: Yash
+  // © 2026 All Rights Reserved
         async function fetchEvolutionTree(url) {
             const tree = document.getElementById('evolution-tree');
             tree.innerHTML = "Loading Evolutions...";
@@ -637,7 +658,9 @@
                 `).join('')}
             `;
         }
-
+  // Pokédex Engine
+  // Developer: Yash
+  // © 2026 All Rights Reserved
         function closeModal() { document.getElementById('modal').style.display = 'none'; window.speechSynthesis.cancel(); }
         function closeBattle() { document.getElementById('battle-modal').style.display = 'none'; }
 
